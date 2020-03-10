@@ -35,7 +35,7 @@
                     <ul class="navbar-nav mr-auto">
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('usuarios.index') }}">{{ __('Usuarios') }}</a>
+                        <a class="nav-link" href="{{ route('citas.index') }}">{{ __('Citas') }}</a>
                     </li>
 
                     </ul>

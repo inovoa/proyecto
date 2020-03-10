@@ -17,11 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Route::get('/usuarios', 'UsuariosController@index');
-
-//Route::get('/usuarios/create', 'UsuariosController@create');
-
-Route::resource('usuarios', 'UsuariosController')->middleware('auth');
+Route::resource('citas', 'CitasController')->middleware('auth');
 
 Auth::routes();
 

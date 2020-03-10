@@ -5,10 +5,10 @@
 
 <div class="container">
 
-<form action="{{ url('/usuarios/' . $usuario->id) }}" method="post" enctype="multipart/form-data">
+<form action="{{ url('/citas/' . $cita->id) }}" method="post" enctype="multipart/form-data">
 {{ csrf_field() }}
 {{ method_field('PATCH') }}
-@include('usuarios.form', ['Modo' => 'editar'])
+@include('citas.form', ['Modo' => 'editar'])
 
 </form>
 

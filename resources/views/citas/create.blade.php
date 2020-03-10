@@ -20,10 +20,10 @@
 </div>
 @endif
 
-<form action="{{ url ('/usuarios')}}" class="form-horizontal" method="post" enctype="multipart/form-data">
+<form action="{{ url ('/citas')}}" class="form-horizontal" method="post" enctype="multipart/form-data">
 {{ csrf_field() }}
 
-@include('usuarios.form', ['Modo' => 'crear'])
+@include('citas.form', ['Modo' => 'crear'])
 
 
 
