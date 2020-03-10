@@ -35,6 +35,15 @@
 
 </div>
 
+<div class="form-group">
+<label for="Telefono" class="control-label">{{'Telefono'}}</label>
+<input type="text" class="form-control {{$errors->has('Telefono')?'is-invalid':'' }}" name="Telefono" id="Telefono" value="{{ isset($cita->Telefono)?$cita->Telefono:old('Telefono') }}">
+{!! $errors->first('Telefono','<div class="invalid-feedback">:message</div>') !!}
+
+</div>
+
+
+
 <input type="submit" class="btn btn-success" value="{{ $Modo=='crear' ? 'Agregar':'Modificar' }}">
 
 <a href="{{ url('citas') }}" class="btn btn-primary">Volver atras</a>

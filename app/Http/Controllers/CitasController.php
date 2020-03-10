@@ -12,6 +12,7 @@ class CitasController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
     public function index()
     {
         //
@@ -44,7 +45,8 @@ class CitasController extends Controller
                 'Hora' => 'required|string|max:100',
                 'MarcaModeloCoche' => 'required|string|max:100',
                 'AñoCoche' => 'required|string|max:100',
-                'Color' => 'required|string|max:100'
+                'Color' => 'required|string|max:100',
+                'Telefono' => 'required|string|max:100'
         ];
         $Mensaje=["required" => 'El :attribute es requerido.'];
         $this->validate($request,$campos,$Mensaje);
@@ -97,7 +99,8 @@ class CitasController extends Controller
                 'Hora' => 'required|string|max:100',
                 'MarcaModeloCoche' => 'required|string|max:100',
                 'AñoCoche' => 'required|string|max:100',
-                'Color' => 'required|string|max:100'
+                'Color' => 'required|string|max:100',
+                'Telefono' => 'required|string|max:100'
         ];
         $Mensaje=["required" => 'El :attribute es requerido.'];
         $this->validate($request,$campos,$Mensaje);

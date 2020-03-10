@@ -20,6 +20,7 @@ class CreateCitasTable extends Migration
             $table->string('MarcaModeloCoche');
             $table->string('AñoCoche');
             $table->string('Color');
+            $table->string('Telefono');
 
             $table->timestamps();
         });

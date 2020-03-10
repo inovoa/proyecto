@@ -25,6 +25,7 @@
             <th>Marca y modelo del coche</th>
             <th>Año del coche</th>
             <th>Color del coche</th>
+            <th>Telefono</th>
             <th>Acciones</th>
         </tr>
     </thead>
@@ -37,6 +38,7 @@
             <td>{{ $cita->MarcaModeloCoche }}</td>
             <td>{{ $cita->AñoCoche }}</td>
             <td>{{ $cita->Color }}</td>
+            <td>{{ $cita->Telefono }}</td>
             <td>
                 
             <a class="btn btn-primary" href="{{ url('/citas/'.$cita->id.'/edit') }}">
