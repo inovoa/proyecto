@@ -65,13 +65,13 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="{{ URL::asset('/css/img1.jpg') }}" alt="First slide">
+                        <img class="d-block w-100" src="{{ URL::asset('/css/img1.jpg') }}" width="1000px" height="600px" alt="First slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="{{ URL::asset('/css/img1.jpg') }}" alt="Second slide">
+                        <img class="d-block w-100" src="{{ URL::asset('/css/img2.jpg') }}" width="1000px" height="600px" alt="Second slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="{{ URL::asset('/css/img1.jpg') }}" alt="Third slide">
+                        <img class="d-block w-100" src="{{ URL::asset('/css/img3.jpg') }}" width="1000px" height="600px" alt="Third slide">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -85,7 +85,7 @@
             </div>
         </section>
         <section class="serviciosofrecidos">
-            <h2>Servicios que realizamos</h2>
+            <h2>Servicios que ofrecemos</h2>
 
             <div class="servicios">
 
@@ -94,7 +94,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Limpieza exterior</h5>
                         <p class="card-text">Limpieza del exterior del vehiculo con los cuidados adecuados.</p>
-                        <a href="#" class="btn btn-primary">Pedir cita</a>
+                        <a href="{{ url('citas/create' ) }}" class="btn btn-primary">Pedir cita</a>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
@@ -102,7 +102,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Limpieza interior</h5>
                         <p class="card-text">Limpieza del interior del vehiculo con los cuidados adecuados.</p>
-                        <a href="#" class="btn btn-primary">Pedir cita</a>
+                        <a href="{{ url('citas/create' ) }}" class="btn btn-primary">Pedir cita</a>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem;">
@@ -110,7 +110,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Pulido y sellado</h5>
                         <p class="card-text">Pulido y sellado del exterior del vehiculo con los cuidados adecuados.</p>
-                        <a href="#" class="btn btn-primary">Pedir cita</a>
+                        <a href="{{ url('citas/create' ) }}" class="btn btn-primary">Pedir cita</a>
                     </div>
                 </div>
 
@@ -127,7 +127,7 @@
             <h5>Nosotros</h5>
             <ul class="list-unstyled text-small">
             <li><a class="text-muted" href="{{ url('dondeestamos') }}">Donde estamos</a></li>  
-              <li><a class="text-muted" href="#">Quienes somos</a></li>
+              <li class="colornegro"><a class="text-muted" href="#">Quienes somos</a></li>
               <li><a class="text-muted" href="{{ url('contacto') }}">Contacto</a></li>
 
           </div>
@@ -149,13 +149,6 @@
           
         </div>
       </footer>
-
-
-
-
-
-
-
 
 
     </div>

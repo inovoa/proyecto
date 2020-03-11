@@ -16,11 +16,13 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="icon" href="{{ URL::asset('/css/favicon.png') }}" type="image/x-icon" />
-    <style>.container{margin-top: 10px;}</style>
+    <link rel="stylesheet" href="{{ URL::asset('/css/estilos2.css') }}" type="text/css" />
+    
 </head>
 
 <body>
