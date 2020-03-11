@@ -1,4 +1,4 @@
-
+<link rel="icon" href="{{ URL::asset('/css/favicon.png') }}" type="image/x-icon" />
 
 <div class="form-group">
     

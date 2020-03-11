@@ -3,6 +3,8 @@
 
 @section('content')
 
+<link rel="icon" href="{{ URL::asset('/css/favicon.png') }}" type="image/x-icon" />
+
 <div class="container">
 
 <table class="table table-light table-hover">

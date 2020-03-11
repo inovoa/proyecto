@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+
+<link rel="icon" href="{{ URL::asset('/css/favicon.png') }}" type="image/x-icon" />
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

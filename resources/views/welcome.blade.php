@@ -34,10 +34,10 @@
                             <a class="nav-link" href="{{ url('welcome') }}"> Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href=""> Donde estamos</a>
+                            <a class="nav-link" href="{{ url('dondeestamos') }}"> Donde estamos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"> Precios</a>
+                            <a class="nav-link" href="{{ url('contacto') }}"> Contacto</a>
                         </li>
 
                         @if (Route::has('login'))
@@ -124,17 +124,11 @@
             <small class="d-block mb-3 text-muted">&copy; 2017-2020</small>
           </div>
           <div class="col-6 col-md">
-            <h5>Features</h5>
+            <h5>Nosotros</h5>
             <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="{{ url('dondeestamos') }}">Donde estamos</a></li>  
               <li><a class="text-muted" href="#">Quienes somos</a></li>
-              <li><a class="text-muted" href="#">Contacto</a></li>
-
-          </div>
-          <div class="col-6 col-md">
-            <h5>Features</h5>
-            <ul class="list-unstyled text-small">
-              <li><a class="text-muted" href="#">Terminos de uso</a></li>
-              <li><a class="text-muted" href="#">Politicas de privacidad</a></li>
+              <li><a class="text-muted" href="{{ url('contacto') }}">Contacto</a></li>
 
           </div>
           <div class="col-6 col-md">
@@ -145,6 +139,14 @@
               <li><a class="text-muted" href="https:/www.Facebook.com">Facebook</a></li>
             </ul>
           </div>
+          <div class="col-6 col-md">
+            <h5>Features</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-muted" href="#">Terminos de uso</a></li>
+              <li><a class="text-muted" href="#">Politicas de privacidad</a></li>
+
+          </div>
+          
         </div>
       </footer>
 

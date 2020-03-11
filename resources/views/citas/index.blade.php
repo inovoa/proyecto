@@ -13,7 +13,9 @@
 
 @endif
 
-<a href="{{ url('citas/create') }}" class="btn btn-success">Agregar cita</a>
+<link rel="icon" href="{{ URL::asset('/css/favicon.png') }}" type="image/x-icon" />
+
+<a href="{{ url('citas/create' ) }}" class="btn btn-success">Agregar cita</a>
 <br/>
 <br/>
 <table class="table table-light table-hover">

@@ -21,7 +21,15 @@ Route::get('/', function () {
 
 Route::get('welcome', function () {
     return view('welcome');
-    //return view('auth.login');
+
+});
+
+Route::get('dondeestamos', function () {
+    return view('dondeestamos');
+});
+
+Route::get('contacto', function () {
+    return view('contacto');
 });
 
 Route::resource('citas', 'CitasController')->middleware('auth');
@@ -31,7 +39,7 @@ Auth::routes();
 
 
 
-Route::get('/users', 'UsersController@index');
+Route::get('/users', 'UsersController@index')->name('users');
 /*Route::get('/users/{id}',function($id){
     $user = DB::table('users')
     ->where('id', $id)

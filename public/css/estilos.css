@@ -8,8 +8,34 @@ body {
     margin: 0;
 }
 
+.carrouselimagenes {
+    margin-top: 10px;
+}
+
+.apiydireccion {
+    margin-top: 10px;
+    display: flex;
+}
+
+.titulocont {
+    font-size: 30px;
+    margin-left: 25%;
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.direccion {
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
 .container {
     margin-top: 30px;
+}
+
+.formulariocontacto {
+    margin-left: 20%;
 }
 
 .full-height {
