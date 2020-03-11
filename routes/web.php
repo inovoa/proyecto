@@ -32,6 +32,8 @@ Route::get('contacto', function () {
     return view('contacto');
 });
 
+Route::post('contacto', 'MessagesController@Store');
+
 Route::resource('citas', 'CitasController')->middleware('auth');
 
 

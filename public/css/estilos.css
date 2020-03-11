@@ -72,7 +72,9 @@ body {
 .title {
     font-size: 30px;
 }
-
+#botonenviar{
+    margin-top: 10px;
+}
 .links>a {
     color: black;
     padding-left: 10px;

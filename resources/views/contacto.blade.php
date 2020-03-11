@@ -40,7 +40,7 @@
                             <a class="nav-link" href="{{ url('dondeestamos') }}"> Donde estamos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"> Contacto</a>
+                            <a class="nav-link" href="{{ url('contacto') }}"> Contacto</a>
                         </li>
 
                         @if (Route::has('login'))
@@ -69,40 +69,41 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="well well-sm">
-                            <form class="form-horizontal" method="post">
+                            <form class="form-horizontal" method="post" action="{{ url('contacto') }}">
+                                @csrf
                                 <fieldset>
 
                                     <div class="form-group">
                                         <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
                                         <div class="col-md-8">
-                                            <input id="fname" name="name" type="text" placeholder="Nombre" class="form-control">
-                                        </div>
+                                            <input id="fname" name="nombre" type="text" placeholder="Nombre" class="form-control" value="{{ old('nombre') }}" >
+                                            {{$errors->first('nombre')}}
                                     </div>
 
                                     <div class="form-group">
                                         <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
                                         <div class="col-md-8">
-                                            <input id="email" name="email" type="text" placeholder="Email" class="form-control">
-                                        </div>
+                                            <input id="email" name="email" type="text" placeholder="Email" class="form-control" value="{{ old('email') }}">
+                                            {{$errors->first('email')}}
                                     </div>
 
                                     <div class="form-group">
                                         <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
                                         <div class="col-md-8">
-                                            <input id="phone" name="phone" type="text" placeholder="Telefono" class="form-control">
-                                        </div>
+                                            <input id="phone" name="telefono" type="text" placeholder="Telefono" class="form-control" value="{{ old('telefono') }}">
+                                            {{$errors->first('telefono')}}
                                     </div>
 
                                     <div class="form-group">
                                         <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
                                         <div class="col-md-8">
-                                            <textarea class="form-control" id="message" name="message" placeholder="Escribe tu mensaje aquí, trataremos de responder lo antes posible." rows="7"></textarea>
-                                        </div>
+                                            <textarea class="form-control" id="message" name="mensaje" placeholder="Escribe tu mensaje aquí, trataremos de responder lo antes posible." rows="7" value="{{ old('mensaje') }}"></textarea>
+                                            {{$errors->first('mensaje')}}
                                     </div>
 
                                     <div class="form-group">
                                         <div class="col-md-12 text-center">
-                                            <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+                                            <button type="submit" id="botonenviar" class="btn btn-primary btn-lg">Enviar</button>
                                         </div>
                                     </div>
                                 </fieldset>
