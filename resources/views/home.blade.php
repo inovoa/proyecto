@@ -5,19 +5,14 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Mis datos</div>
+                <div class="card-header">Panel de control</div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    Has iniciado sesión.
-                </div>
             </div>
+            <br><br>
+            <a class="btn btn-primary" href="{{ route('home') }}">{{ __('Ver mis datos') }}</a>
+            <a class="btn btn-primary" href="{{ route('citas.index') }}">{{ __('Ver mis citas') }}</a>
         </div>
     </div>
+</div>
 </div>
 @endsection

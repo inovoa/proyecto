@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\DB;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,20 +18,27 @@ Route::get('/', function () {
     //return view('auth.login');
 });
 
+
+Route::get('welcome', function () {
+    return view('welcome');
+    //return view('auth.login');
+});
+
 Route::resource('citas', 'CitasController')->middleware('auth');
 
-//Authentication routes..
-Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
-Route::post('login', 'Auth\LoginController@login');
-Route::post('logout', 'Auth\LoginController@logout')->name('logout');
-//Registration routes..
-Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
-Route::post('register', 'Auth\RegisterController@register');
-//Password reset routes..
-Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
-Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');;
-Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
-Route::post('password/reset', 'Auth\ResetPasswordController@reset');
+
+Auth::routes();
+
+
+
+Route::get('/users', 'UsersController@index');
+/*Route::get('/users/{id}',function($id){
+    $user = DB::table('users')
+    ->where('id', $id)
+    ->get();
+})->name('users.index');*/
 
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/change-password', 'Auth\ChangePasswordController@index')->name('password.change');
+Route::post('/change-password', 'Auth\ChangePasswordController@changepassword')->name('password.update');
